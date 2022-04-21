@@ -1,7 +1,7 @@
 const MAX_LIFE = 100
 
 class Fighter {
-  constructor(name, strength, dexterity, image, x, y) {
+  constructor(name, strength, dexterity, image, x, y, range) {
     this.name = name;
     this.strength = strength;
     this.dexterity = dexterity;
@@ -9,6 +9,7 @@ class Fighter {
     this.image = image;
     this.x = x;
     this.y = y;
+    this.range = 1.00
   }
 
 
@@ -60,5 +61,9 @@ class Fighter {
   */
   isAlive() {
     return this.life > 0;
+  }
+
+  getRange() {
+    return this.range;
   }
 }
